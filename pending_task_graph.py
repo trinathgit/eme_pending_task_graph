@@ -122,7 +122,7 @@ def call_main_data():
 
 
     totaldf=[]
-    tasksublist ={'Inventory':'Inventory_Submission_Date','Simulation':'Simulatiion_Submission_Date','Mitigation':'Mitigation_Submission_Date','Report Generation':'report_generation_Submission_Date','Quality Check':'Quality_Check_Submission_Date','Exceedance/Updates':'Exceedance_Updates_Submission_Date'}
+    tasksublist ={'Inventory':'Inventory_Submission_Date','Simulation':'Simulatiion_Submission_Date','Mitigation':'Mitigation_Submission_Date','Report Generation':'report_generation_Submission_Date','Quality Check':'Quality_Check_Submission_Date'}#,'Exceedance/Updates':'Exceedance_Updates_Submission_Date'
     for ktl,vtl in tasksublist.items():
         fdf = {}
         filtered_df = getdfmnf3[getdfmnf3[vtl].isna() | (getdfmnf3[vtl] == '') | (getdfmnf3[vtl] == 'None')]
@@ -144,7 +144,7 @@ def call_main_data():
 data1 = call_main_data()
 print("data : ",data1)
 
-tasksublist ={'Inventory':0,'Simulation':1,'Mitigation':2,'Report Generation':3,'Quality Check':4,'Exceedance/Updates':5}
+tasksublist ={'Inventory':0,'Simulation':1,'Mitigation':2,'Report Generation':3,'Quality Check':4}#,'Exceedance/Updates':5
 
 data = {
     "Category": list(tasksublist.keys()),
