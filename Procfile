@@ -1,1 +1,1 @@
-web: sh refresh.sh && streamlit run site_metrics_graph.py
+web: sh refresh.sh && streamlit run pending_task_graph.py
